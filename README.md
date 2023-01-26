@@ -1,11 +1,11 @@
 # URL Shortener
 
-This is a simple URL shortener service built with Ruby on Rails that also generates usage reports for the application. The reports track the number of clicks, originating geolocation, and timestamp of each visit to a shortened URL.
+A simple URL shortener service built with Ruby on Rails that also generates usage reports for the application. The reports track the number of clicks, originating geolocation, and timestamp of each visit to a shortened URL.
 
 ## Installation
 
 1. Clone the repository:
-`git clone https://github.com/irisyann/url_shortener.git`
+`git clone https://github.com/irisyann/url-shortener.git`
 
 2. Install the required dependencies
 `bundle install`
@@ -22,20 +22,13 @@ This is a simple URL shortener service built with Ruby on Rails that also genera
 - Ruby 3.1.3
 - Rails 7.0.4.2
 - PostgreSQL
-- Geocoder
-- Nokogiri
+- Geocoder - for retrieving the geolocation of a user
+- Nokogiri - for retrieving the title tag of a target URL
 
 ## Deployment
 
 This app is deployed on Heroku and uses a PostgreSQL database. 
 You will need a Heroku account to deploy it yourself.
-
-## Scaffolding Tools
-
-This app was built using the following scaffolding tools:
-
-- Geocoder gem for retrieving the geolocation of a user
-- Nokogiri gem for retrieving the title tag of a target URL
 
 ## Usage
 
