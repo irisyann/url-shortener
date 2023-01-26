@@ -3,21 +3,22 @@ development:
   encoding: unicode
   database: d3tc7jbg7b9ps5
   pool: 5
-  username: postgres
-  password: pass
+  username: 
+  password: 
 
 test:
   adapter: postgresql
   encoding: unicode
   database: d3tc7jbg7b9ps5
   pool: 5
-  username: postgres
-  password: pass
+  username: 
+  password: 
 
 production:
   adapter: postgresql
   encoding: unicode
+  url: <%= ENV['DATABASE_URL'] %>
   database: d3tc7jbg7b9ps5
   pool: 5
-  username: postgres
-  password: pass
+  username: 
+  password: 
