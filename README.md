@@ -1,6 +1,6 @@
 # URL Shortener
 
-This is a simple URL shortener service built with Ruby on Rails that also generates usage reports for the application. The reports track the number of clicks, originating geolocation, and timestamp of each visit to a shortened URL.
+A simple URL shortener service built with Ruby on Rails that also generates usage reports for the application. The reports track the number of clicks, originating geolocation, and timestamp of each visit to a shortened URL.
 
 ## Installation
 
