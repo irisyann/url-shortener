@@ -20,16 +20,12 @@
                 <div>
                     <%= f.text_field :target_url, class: "form-control input-lg" %>
                     <br>
-
-                    
-                            <% @short_url.errors.full_messages_for(:target_url).each do |message| %>
-                                <div class="alert alert-danger" role="alert"><%= message %></div>
-                            <% end %>
-                        
-                    
+                    <% @short_url.errors.full_messages_for(:target_url).each do |message| %>
+                        <div class="alert alert-danger" role="alert"><%= message %></div>
+                    <% end %>
                 </div>
-                
                 <br>
+                
                 <div>
                     <%= f.submit "Shorten my URL", class: "btn btn-primary" %>
                 </div>

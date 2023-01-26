@@ -15,6 +15,7 @@
         <thead>
             <tr>
                 <th>Short URL</th>
+                <th>Target URL</th>
                 <th>Title</th>
                 <th>Number of clicks</th>
                 <th>Origin geolocation</th>
@@ -24,7 +25,8 @@
         <tbody>
             <% @short_url.each do |url| %>
                 <tr>
-                    <td><%= link_to url.short_path, url.short_path, target: :_blank %></td>
+                    <td><%= link_to URI.join(root_url, url.short_path).to_s  , url.short_path, target: :_blank, :class => "btn btn-primary" %></td>
+                    <td><%= link_to url.target_url, url.target_url, target: :_blank %></td>
                     <td><%= url.title %></td>
                     <td><%= url.num_clicks %></td>
 
