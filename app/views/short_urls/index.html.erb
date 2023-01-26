@@ -11,41 +11,45 @@
 
     <h3>List of shortened URLs</h3>
 
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th>Short URL</th>
-                <th>Target URL</th>
-                <th>Title</th>
-                <th>Number of clicks</th>
-                <th>Origin geolocation</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <% @short_url.each do |url| %>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
                 <tr>
-                    <td><%= link_to URI.join(root_url, url.short_path).to_s  , url.short_path, target: :_blank, :class => "btn btn-primary" %></td>
-                    <td><%= link_to url.target_url, url.target_url, target: :_blank %></td>
-                    <td><%= url.title %></td>
-                    <td><%= url.num_clicks %></td>
-
-                    <td>
-                        <table class="table">
-                            <% url.geolocations.each do |geolocation| %>
-                                <tr>
-                                    <td><%= geolocation.location %></td>
-                                    <td><%= geolocation.created_at %></td>
-                                </tr>
-                                
-                            <% end %>
-                        </table>
-                    </td>
-
+                    <th>Short URL</th>
+                    <th>Target URL</th>
+                    <th>Title</th>
+                    <th>Number of clicks</th>
+                    <th>Origin geolocation</th>
                 </tr>
-            <% end %>
-        </tbody>
-    </table>
+            </thead>
+
+            <tbody>
+                <% @short_url.each do |url| %>
+                    <tr>
+                        <td><%= link_to URI.join(root_url, url.short_path).to_s  , url.short_path, target: :_blank, :class => "btn btn-primary" %></td>
+                        <td><%= link_to url.target_url, url.target_url, target: :_blank %></td>
+                        <td><%= url.title %></td>
+                        <td><%= url.num_clicks %></td>
+
+                        <td>
+                            <table class="table">
+                                <% url.geolocations.each do |geolocation| %>
+                                    <tr>
+                                        <td><%= geolocation.location %></td>
+                                        <td><%= geolocation.created_at %></td>
+                                    </tr>
+                                    
+                                <% end %>
+                            </table>
+                        </td>
+
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+
+    
 </div>
 
 <%= render "layouts/footer" %>
