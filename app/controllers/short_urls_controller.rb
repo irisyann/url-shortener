@@ -56,7 +56,6 @@ class ShortUrlsController < ApplicationController
         # increment number of clicks to the short url
         @short_url.update_attribute(:num_clicks, @short_url.num_clicks + 1)
 
-        window.location.reload()
     else
         redirect_to root_path, notice: "Invalid short URL" if @short_url.nil?
         # render 'errors/404', status: 404 if @short_url.nil?
