@@ -5,7 +5,7 @@ This is a simple URL shortener service built with Ruby on Rails that also genera
 ## Installation
 
 1. Clone the repository:
-`git clone https://github.com/irisyann/url_shortener.git`
+`git clone https://github.com/irisyann/url-shortener.git`
 
 2. Install the required dependencies
 `bundle install`
