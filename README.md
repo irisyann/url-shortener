@@ -22,20 +22,13 @@ A simple URL shortener service built with Ruby on Rails that also generates usag
 - Ruby 3.1.3
 - Rails 7.0.4.2
 - PostgreSQL
-- Geocoder
-- Nokogiri
+- Geocoder - for retrieving the geolocation of a user
+- Nokogiri - for retrieving the title tag of a target URL
 
 ## Deployment
 
 This app is deployed on Heroku and uses a PostgreSQL database. 
 You will need a Heroku account to deploy it yourself.
-
-## Scaffolding Tools
-
-This app was built using the following scaffolding tools:
-
-- Geocoder gem for retrieving the geolocation of a user
-- Nokogiri gem for retrieving the title tag of a target URL
 
 ## Usage
 
