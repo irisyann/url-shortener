@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: url_shortener_development
+  database: d3tc7jbg7b9ps5
   pool: 5
   username: postgres
   password: pass
@@ -9,7 +9,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: url_shortener_development
+  database: d3tc7jbg7b9ps5
   pool: 5
   username: postgres
   password: pass
@@ -17,7 +17,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: url_shortener_production
+  database: d3tc7jbg7b9ps5
   pool: 5
   username: postgres
   password: pass
