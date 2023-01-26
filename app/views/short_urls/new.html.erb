@@ -1,9 +1,10 @@
-<div class="jumbotron">
-    <div class="container">
-        <h2>
-            Shorten your URL
-        </h2>
-    </div>
+<div style="width: 100%; height: 300px; padding: 20px; display: flex; justify-content: center; flex-direction: column; align-items:center; margin-bottom: 30px;" class="bg-primary">
+    <h1>
+        <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+        URL Shortener service
+    </h1>
+    <br>
+    <%= link_to "Back to Home", root_path, :class => "btn btn-default btn-lg" %>
 </div>
 
 <div class="container">
@@ -38,3 +39,4 @@
     </div>
 </div>
 
+<%= render "layouts/footer" %>
