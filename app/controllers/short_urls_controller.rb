@@ -45,13 +45,12 @@ class ShortUrlsController < ApplicationController
       
         ### USING GEOCODER GEM
         @location = request.location.city
-        puts @location
 
           # redirect to target url
         redirect_to @short_url.target_url, status: :moved_permanently, allow_other_host: true
 
         # puts location_data
-        @location = "test location"
+        # @location = "test location"
         @geolocation = @short_url.geolocations.create(:location => @location)
 
         # increment number of clicks to the short url
