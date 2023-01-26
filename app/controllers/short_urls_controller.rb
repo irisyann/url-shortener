@@ -36,21 +36,14 @@ class ShortUrlsController < ApplicationController
     @short_url = ShortUrl.find_by(short_path: params[:short_path])
 
     if @short_url
-        
-        ### USING GOOGLE GEOLOCATION API
-        # response = HTTParty.get("https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCN6BLC-S7ZR3d8eAA_K0ODRhA1CX1msJY")
-        # puts "hi"
-        # puts response.body
-        # location_data = JSON.parse(response.body)
-      
+
         ### USING GEOCODER GEM
         @location = request.location.city
 
-          # redirect to target url
+        # redirect to target url
         redirect_to @short_url.target_url, status: :moved_permanently, allow_other_host: true
 
-        # puts location_data
-        # @location = "test location"
+        # create a new geolocation for the short url visit
         @geolocation = @short_url.geolocations.create(:location => @location)
 
         # increment number of clicks to the short url
