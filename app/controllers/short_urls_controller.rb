@@ -44,7 +44,8 @@ class ShortUrlsController < ApplicationController
         # location_data = JSON.parse(response.body)
       
         ### USING GEOCODER GEM
-        # @location = request.location.city
+        @location = request.location.city
+        puts @location
 
           # redirect to target url
         redirect_to @short_url.target_url, status: :moved_permanently, allow_other_host: true
