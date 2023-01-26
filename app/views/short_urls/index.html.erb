@@ -1,0 +1,50 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1>
+            <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+            URL Shortener service
+        </h1>
+        <br>
+        <%= link_to "Shorten New URL", new_short_url_path, :class => "btn btn-primary btn-lg" %>
+    </div>
+</div>
+
+<div class="container">
+
+    <h3>List of shortened URLs</h3>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Short URL</th>
+                <th>Title</th>
+                <th>Number of clicks</th>
+                <th>Origin geolocation</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @short_url.each do |url| %>
+                <tr>
+                    <td><%= link_to url.short_path, url.short_path %></td>
+                    <td><%= url.title %></td>
+                    <td><%= url.num_clicks %></td>
+
+                    <td>
+                        <table class="table">
+                            <% url.geolocations.each do |geolocation| %>
+                                <tr>
+                                    <td><%= geolocation.location %></td>
+                                    <td><%= geolocation.created_at %></td>
+                                </tr>
+                                
+                            <% end %>
+                        </table>
+                    </td>
+
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+    
+</div>

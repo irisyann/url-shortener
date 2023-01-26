@@ -1,0 +1,40 @@
+<div class="jumbotron">
+    <div class="container">
+        <h2>
+            Shorten your URL
+        </h2>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-xs-5">
+            <%= form_for @short_url do |f| %>
+
+                <div>
+                    <%= f.label "Enter your long URL: ", class: "form-label" %>
+                </div>
+
+                <div>
+                    <%= f.text_field :target_url, class: "form-control input-lg" %>
+                    <br>
+
+                    
+                            <% @short_url.errors.full_messages_for(:target_url).each do |message| %>
+                                <div class="alert alert-danger" role="alert"><%= message %></div>
+                            <% end %>
+                        
+                    
+                </div>
+                
+                <br>
+                <div>
+                    <%= f.submit "Shorten my URL", class: "btn btn-primary" %>
+                </div>
+                
+            <% end %>
+        </div>
+    </div>
+</div>
+
